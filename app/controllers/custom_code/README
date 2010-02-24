@@ -1,0 +1,8 @@
+
+The Custom Code module adds support for a custom code paragraph which is a system-admin only paragraph type that 
+lets you inject custom Rails code into your application.
+
+WARNING: This module is so ridiculously dangerous it should never be used. 
+
+Only system admins are allowed to edit the code.
+

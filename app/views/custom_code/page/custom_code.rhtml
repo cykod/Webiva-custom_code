@@ -1,8 +1,8 @@
 <div class='cms_form'>
 <%  paragraph_options_form_for :custom_code do |f| -%>
 <% if myself.has_role?('admin_system') %>
-  <%= f.text_area :code, :cols => 120, :rows => 15, :vertical => true %>
-  <%= f.text_area :view, :cols => 120, :rows => 15, :vertical => true %>
+  <%= f.text_area :code, :cols => 120, :rows => 15, :vertical => true, :description => "The code to be eval'd - the last statement should be a Hash that is returned to the view as locals" %>
+  <%= f.text_area :view, :cols => 120, :rows => 15, :vertical => true, :description => "ERB View code to run" %>
 <% else -%>
 <%= f.custom_field "No Permissions", :value => "Only System Administrators can edit custom code paragraphs" %>
 <% end -%>

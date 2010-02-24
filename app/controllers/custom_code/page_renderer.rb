@@ -13,7 +13,7 @@ class CustomCode::PageRenderer < ParagraphRenderer
     begin 
       data = self.instance_eval(@options.code)
       if !paragraph_rendered?
-        paragraph_output = render_to_string :inline => @options.view, :locals => data
+        paragraph_output = render_to_string :inline => @options.view, :locals => data.is_a?(Hash) ? data : { }
       end
     rescue Exception => e
       paragraph_output = "Error:" + e.to_s
