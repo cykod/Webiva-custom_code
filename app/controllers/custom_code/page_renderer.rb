@@ -9,7 +9,7 @@ class CustomCode::PageRenderer < ParagraphRenderer
   
     data = {}
 
-    paragraph_output = ''
+    paragraph_output = nil
     begin 
       data = self.instance_eval(@options.code)
       if !paragraph_rendered?
